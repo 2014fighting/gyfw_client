@@ -1,4 +1,6 @@
 // pages/userinfo/useredit.js
+
+var _app = getApp()
 Page({
 
   /**
@@ -12,7 +14,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let that = this;
+    that.setData({
+      userinfo: _app.globalData.userInfo
+    });
+    console.info(_app.globalData.userInfo);
   },
 
   /**

@@ -18,15 +18,15 @@
     <view class="page__bd">
         <view class="weui-grids">
         <navigator url="../banjia/banjia" class="mygrid weui-grid" hover-class="weui-grid_active">
-                    <image class="mygrid_icon" src="../../images/fuwu1.jpg" />
+                    <image class="mygrid_icon" src="../../images/weixiu.png" />
                     <view class="weui-grid__label">水电维修</view>
                 </navigator>
                 <navigator url="../banjia/banjia" class="mygrid weui-grid" hover-class="weui-grid_active">
-                    <image class="mygrid_icon" src="../../images/fuwu2.jpg" />
+                    <image class="mygrid_icon" src="../../images/baojie.png" />
                     <view class="weui-grid__label">清洗保洁</view>
                 </navigator>
                 <navigator url="../banjia/banjia" class="mygrid weui-grid" hover-class="weui-grid_active">
-                    <image class="mygrid_icon" src="../../images/fuwu3.jpg" />
+                    <image class="mygrid_icon" src="../../images/banjia.png" />
                     <view class="weui-grid__label">搬家服务</view>
                 </navigator>
             <block wx:for="{{grids}}" wx:key="*this">

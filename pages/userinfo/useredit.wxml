@@ -1,2 +1,49 @@
-<!--pages/userinfo/useredit.wxml-->
-<text>pages/userinfo/useredit.wxml</text>
+
+  <view class="avatar-wrapper">
+    <view>
+      <view class="avatar">
+          <image src="{{userinfo.avatarUrl ? userinfo.avatarUrl:'../../images/geren1.png'}}"></image>
+      </view>
+      <view class="text">
+        <text wx:if="{{userinfo.nickName}}">{{userinfo.nickName}}</text>
+        <text wx:else bindtap="toLogin">注册 / 登录</text>
+      </view>
+      <view class="text">
+        <text wx:if="{{userSign==2}}">{{"您还没有填写真实信息，暂不能操作"}}</text>
+        <text wx:elif="{{userSign==1}}">{{"会员用户"}}</text>
+      </view>
+    </view>
+  </view>
+
+<view class="celltitle">姓名</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入文本" />
+    </view>
+  </view>
+</view>
+
+<view class="celltitle">手机号</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入文本" />
+    </view>
+  </view>
+</view>
+
+<view class="celltitle">自我介绍</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <textarea class="weui-textarea" placeholder="请输入文本" style="height: 3.3em" />
+      <view class="weui-textarea-counter">0/200</view>
+    </view>
+  </view>
+</view>
+
+
+   <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="showTopTips">提交保存</button>
+        </view>
