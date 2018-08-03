@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+ 
+  <view class="page-section page-section-spacing swiper">
+      <swiper
+        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{imgUrls}}" wx:key="*this">
+          <swiper-item>
+          <image src="{{item}}" class="slide-image"style="width:100%"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  <view>
+      <view class="page">
+    
+    <view class="page__bd">
+        <view class="weui-grids">
+        <navigator url="../banjia/banjia" class="mygrid weui-grid" hover-class="weui-grid_active">
+                    <image class="mygrid_icon" src="../../images/fuwu1.jpg" />
+                    <view class="weui-grid__label">水电维修</view>
+                </navigator>
+                <navigator url="../banjia/banjia" class="mygrid weui-grid" hover-class="weui-grid_active">
+                    <image class="mygrid_icon" src="../../images/fuwu2.jpg" />
+                    <view class="weui-grid__label">清洗保洁</view>
+                </navigator>
+                <navigator url="../banjia/banjia" class="mygrid weui-grid" hover-class="weui-grid_active">
+                    <image class="mygrid_icon" src="../../images/fuwu3.jpg" />
+                    <view class="weui-grid__label">搬家服务</view>
+                </navigator>
+            <block wx:for="{{grids}}" wx:key="*this">
+                <navigator url="{{item.url}}" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="mygrid_icon" src="{{item.img}}" />
+                    <view class="weui-grid__label">{{item.name}}</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>
+  </view>
+</view>
+  

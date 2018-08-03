@@ -1,0 +1,13 @@
+/* pages/banjia/banjia.wxss */
+
+
+.btn_ljyy{
+position: fixed;
+bottom: 0;
+width: 100%;
+ 
+}
+
+.v_banjia{
+  margin: 10px  5px;
+}

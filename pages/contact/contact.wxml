@@ -1,0 +1,14 @@
+<!--pages/contact/contact.wxml-->
+<view class="contact">
+   <view class="page__hd">
+       
+        <view class="page__desc">{{text}}
+         <view bindtap="contactMe" class='phoneNum'>客服电话:{{mobile}}</view>
+        </view>
+    </view>
+    <view class='myadress'>
+   <map longitude="{{longitude1}}" latitude="{{latitude1}}"></map>
+    
+    </view>
+  
+</view>
