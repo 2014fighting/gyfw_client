@@ -42,8 +42,6 @@
     </view>
   </view>
 </view>
-
-
    <view class="weui-btn-area">
             <button class="weui-btn" type="primary" bindtap="showTopTips">提交保存</button>
         </view>
