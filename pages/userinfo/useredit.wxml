@@ -15,33 +15,72 @@
     </view>
   </view>
 
-<view class="celltitle">姓名</view>
-<view class="weui-cells weui-cells_after-title">
-  <view class="weui-cell weui-cell_input">
-    <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="请输入文本" />
-    </view>
-  </view>
-</view>
 
-<view class="celltitle">手机号</view>
-<view class="weui-cells weui-cells_after-title">
-  <view class="weui-cell weui-cell_input">
-    <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="请输入文本" />
-    </view>
-  </view>
-</view>
+<view class="form">
+    <view class="page__bd">        
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">昵称</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="nickName" placeholder="请输入昵称" value="{{userInfo.nickName}}"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input weui-cell_vcode">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">手机号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" type="number" maxlength="11" name="phone" placeholder="请输入手机号" value="{{userInfo.phone}}" />
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">性别</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="selector" name="gender" value="{{userInfo.gender}}" range="{{sex}}" bindchange="selectsex">
+                        <view class="weui-input">{{sex[userInfo.gender]}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">所在城市</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="weui-input" name="city"  bindtap="open">{{province}}-{{city}}-{{county}}</view>
+                </view>
+            </view>
 
-<view class="celltitle">自我介绍</view>
-<view class="weui-cells weui-cells_after-title">
-  <view class="weui-cell">
-    <view class="weui-cell__bd">
-      <textarea class="weui-textarea" placeholder="请输入文本" style="height: 3.3em" />
-      <view class="weui-textarea-counter">0/200</view>
-    </view>
-  </view>
-</view>
-   <view class="weui-btn-area">
+        </view>
+       <view class="weui-btn-area">
             <button class="weui-btn" type="primary" bindtap="showTopTips">提交保存</button>
         </view>
+        </form>
+    </view>
+       <view wx:if="{{condition}}" class="citypicker">
+<picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;background:#2FB42E" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+    <view bindtap="open" class="city-cancel">取消</view>
+    <view bindtap="open" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+    <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+    <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+    <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+</picker-view>
+</view>
+</view>
+   
+
+
+
+ 
