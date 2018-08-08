@@ -1,13 +1,13 @@
 {
   "pages": [
-    
     "pages/index/index",
     "pages/logs/logs",
     "pages/mypage/mypage",
     "pages/contact/contact",
     "pages/banjia/banjia",
-      "pages/userinfo/useredit"
-  
+    "pages/userinfo/useredit",
+    "pages/myappoint/add",
+    "pages/myappoint/list"
   ],
   "window": {
     "backgroundTextStyle": "light",

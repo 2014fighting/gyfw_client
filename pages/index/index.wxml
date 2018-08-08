@@ -17,7 +17,7 @@
     
     <view class="page__bd">
         <view class="weui-grids">
-        <navigator url="../banjia/banjia" class="mygrid weui-grid" hover-class="weui-grid_active">
+                <navigator url="" class="mygrid weui-grid" hover-class="weui-grid_active">
                     <image class="mygrid_icon" src="../../images/weixiu.png" />
                     <view class="weui-grid__label">水电维修</view>
                 </navigator>
